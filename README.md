@@ -1,31 +1,57 @@
-Mummy Meals
-Overview
-Mummy Meals is a web application designed to connect customers with home cooks (mummys) who provide delicious, homemade meals. The platform allows users to easily order meals, manage their accounts, and enjoy the comfort of home-cooked food delivered right to their doorstep.
+# 🍱 Mummy Meals – Homemade Food Delivery Platform
 
-Features
-User Authentication: Secure login and registration for customers and mummys.
-Meal Listings: Browse and order from a variety of home-cooked meals.
-Profile Management: Users can manage their profiles, including personal information and meal preferences.
-Order Management: Customers can view their order history and track current orders.
-Responsive Design: Optimized for both desktop and mobile devices.
-Technologies Used
-Frontend: HTML, CSS, JavaScript
-Frameworks: Poppins font for typography
-Storage: Local storage for user data and orders
-Installation
-Clone the repository:
-bash
-Run
-Copy code
-git clone https://github.com/yourusername/mummy-meals.git
-Navigate to the project directory:
-bash
-Run
-Copy code
-cd mummy-meals
-Open index.html in your web browser to view the application.
-Usage
-Login: Use your mobile number and password to log in.
-Sign Up: New users can register by providing their details.
-Browse Meals: Explore the available meals and place orders.
-Manage Profile: Update your personal information and meal preferences.
+Mummy Meals is a web platform that connects working individuals, students, and professionals with home-based cooks ("Mummys") who prepare hygienic, authentic Indian meals. This project aims to empower women while offering nutritious, affordable meals to those living away from home.
+
+---
+
+## 🌟 Features
+
+### 👩‍🍳 For Mummys:
+- Easy login & registration.
+- Set daily meal limits (max 20).
+- Update daily menus & special dishes.
+- Real-time order tracking.
+- Transparent earnings dashboard.
+
+### 🍽️ For Customers:
+- Browse nearby Mummy meals (like Zomato).
+- View ratings, distance & delivery time.
+- Select meals & view menu variations.
+- Track orders and estimated delivery.
+- Secure login and user profile.
+
+---
+
+## 💰 Revenue Model
+- ₹140 per meal shown to user.
+- ₹90 goes to Mummy.
+- ₹20 to Delivery Partner.
+- ₹30 is platform fee (for operations, tech, support).
+
+---
+
+## 🖼️ UI Highlights
+- Scroll-based animations (like Apple’s product pages).
+- Full-screen background illustrations.
+- Clean, minimal and traditional-themed frontend.
+- Zomato-style browsing experience.
+
+---
+
+## 💻 Tech Stack
+
+| Frontend       | Backend      | Tools & Design       |
+|----------------|--------------|----------------------|
+| HTML5, CSS3    | Node.js*     | Figma (UI design)    |
+| JavaScript     | Express.js*  | Git & GitHub         |
+| ScrollMagic.js | MongoDB*     | Responsive Web Design |
+
+\*Planned for future MVP phase
+
+---
+
+## 🛠️ Getting Started
+
+```bash
+git clone https://github.com/tusharsh6289/Builders.git
+cd Builders
