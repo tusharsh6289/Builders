@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mummy Meals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="csss/whenlogin.css">
+</head>
+
+<body class="login-page">
+    <div class="login-container">
+        <h4>Login to Mummy Meals</h4>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your 10-digit mobile number" required pattern="[0-9]{10}">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="6">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <div class="login-links">
+            <a href="forgot_password.html">Forgot Password?</a>
+            <a href="otp_login.html">Login with OTP</a>
+        </div>
+
+        <div class="register-link">
+            <p>New to Mummy Meals? <a href="newregister_1.html">Register as a new user</a></p>
+        </div>
+
+        <div class="back-home">
+            <a href="frontpage.html">&larr; Back to Home</a>
+        </div>
+    </div>
+
+    <script src="jss/whenlogin.js"></script>
+</body>
+
+</html>

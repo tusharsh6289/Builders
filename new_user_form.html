@@ -1,0 +1,186 @@
+<!-- new_user_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Create Account - Mummy Meals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="csss/new_user_form.css" />
+</head>
+<body class="signup-page">
+<div class="signup-container">
+  
+  <div class="signup-info-column">
+    <img src="resources/images1/logo.png" alt="Mummy Meals Logo" class="signup-logo" />
+    <h2>Create your Mummy Meals Account</h2>
+    <p class="signup-description">Join our community of cooks and customers!</p>
+  </div>
+  
+  <div class="signup-form-column">
+    <form id="signup-form" autocomplete="off">
+      
+      <div class="form-step active-step" id="step-1">
+        <p class="step-instruction">What's your name?</p>
+        <div class="name-fields-row">
+          <div class="form-group">
+            <label for="first-name" required>First Name</label>
+            <input type="text" id="first-name" name="firstName" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name (Optional)</label>
+            <input type="text" id="last-name" name="lastName" />
+          </div>
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="btn btn-primary next-step">Next</button>
+        </div>
+      </div>
+      
+      <div class="form-step" id="step-2">
+        <p class="step-instruction">Basic Info</p>
+        <label>Birthday</label>
+        <div class="birthday-group">
+          <div class="form-group">
+            <label for="birth-month" class="sr-only">Month</label>
+            <select id="birth-month" name="birthMonth" required>
+              <option value="" disabled selected>Month</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="birth-day" class="sr-only">Day</label>
+            <input type="number" id="birth-day" name="birthDay" placeholder="Day" required min="1" max="31" />
+          </div>
+          <div class="form-group">
+            <label for="birth-year" class="sr-only">Year</label>
+            <input type="number" id="birth-year" name="birthYear" placeholder="Year" required min="1920" max="2015" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>-- Select Gender --</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Prefer not to say</option>
+          </select>
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="btn btn-secondary prev-step">Previous</button>
+          <button type="button" class="btn btn-primary next-step">Next</button>
+        </div>
+      </div>
+      
+      <div class="form-step" id="step-3">
+        <p class="step-instruction">Contact Number</p>
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="10-digit number" />
+        </div>
+        <div class="form-group">
+          <label for="otp">OTP Verification</label>
+          <input type="text" id="otp" name="otp" placeholder="Enter OTP" required />
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="btn btn-secondary prev-step">Previous</button>
+          <button type="button" class="btn btn-primary next-step">Next</button>
+        </div>
+      </div>
+      
+      <div class="form-step" id="step-4">
+        <p class="step-instruction">Upload Profile Picture</p>
+        <div class="form-group">
+          <label for="profile-picture">Profile Picture</label>
+          <input type="file" id="profile-picture" name="profilePicture" accept="image/*" />
+        </div>
+        <div class="form-group">
+          <label for="common-avatar">Or select a common avatar:</label>
+          <select id="common-avatar" name="commonAvatar">
+            <option value="" disabled selected>Select Avatar</option>
+            <option value="resources/images1/avatar1.png">Avatar 1</option>
+            <option value="resources/images1/avatar2.png">Avatar 2</option>
+          </select>
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="btn btn-secondary prev-step">Previous</button>
+          <button type="button" class="btn btn-primary next-step">Next</button>
+        </div>
+      </div>
+      
+      <div class="form-step" id="step-5">
+        <p class="step-instruction">Set Your Password</p>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required minlength="6" />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirmPassword" required minlength="6" />
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="btn btn-secondary prev-step">Previous</button>
+          <button type="button" class="btn btn-primary next-step">Next</button>
+        </div>
+      </div>
+      
+      <div class="form-step" id="step-6">
+        <p class="step-instruction">Additional Info</p>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="customer">Customer</option>
+            <option value="mummy">Mummy</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" placeholder="Your Address" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pincode">Pincode</label>
+          <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}" />
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="btn btn-secondary prev-step">Previous</button>
+          <button type="submit" class="btn btn-primary">Create Account</button>
+        </div>
+      </div>
+    </form>
+    <div class="signin-link-signup">
+      <p>Already have an account? <a href="whenlogin.html">Sign In</a></p>
+    </div>
+  </div>
+</div>
+
+
+<div id="terms-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Terms and Conditions</h2>
+    <p>Please read and accept our terms and conditions to proceed.</p>
+    <div class="terms-agreement">
+      <input type="checkbox" id="terms-agree" />
+      <label for="terms-agree">I agree to the terms and conditions</label>
+    </div>
+    <button id="agree-button" class="btn btn-primary" disabled>Agree & Continue</button>
+  </div>
+</div>
+
+<script src="jss/new_user_form.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - Mummy Meals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="csss/customer_login.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="resources/images1/logo.png" alt="Logo" class="nav-logo">
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search mummys or dishes...">
+        </div>
+
+        <div class="nav-right">
+            <button class="icon-btn" id="notifications-btn">🔔</button>
+            <button class="icon-btn" id="cart-btn">🛒 <span id="cart-count">0</span></button>
+            <div class="profile-dropdown">
+                <img id="profile-pic" src="resources/images1/avatar1.png" alt="Profile" class="profile-avatar">
+                <div class="dropdown-content">
+                    <a href="#" id="view-profile">Profile</a>
+                    <a href="#" id="wallet">Wallet</a>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Craving Ghar Ka Khana?</h1>
+            <p>Order homemade meals from trusted mummys near you</p>
+        </div>
+    </section>
+
+   
+    <section class="filters">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Veg</button>
+        <button class="filter-btn">Non-Veg</button>
+        <button class="filter-btn">Jain</button>
+        <select class="sort-select">
+            <option>Sort by Rating</option>
+            <option>Sort by Distance</option>
+            <option>Sort by Price</option>
+        </select>
+    </section>
+
+   
+    <main class="mummy-listings" id="mummy-listings">
+       
+    </main>
+
+    <div class="modal" id="menu-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="mummy-name"></h2>
+            <div class="menu-items" id="menu-items"></div>
+        </div>
+    </div>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <h3>Your Cart <span id="cart-close">×</span></h3>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery:</span>
+                <span>₹30</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span id="cart-total">₹30</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Place Order</button>
+        </div>
+    </div>
+
+    <script src="jss/customer_login.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mummy Dashboard - Mummy Meals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Nunito:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="csss/mummy_login.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="resources/images1/logo.png" alt="Logo" class="nav-logo">
+        </div>
+        <div class="nav-center">
+            <span class="nav-quote">🍲 “Home-cooked with love, every single day!”</span>
+        </div>
+        <div class="nav-right">
+            <div class="profile-dropdown">
+                <img id="profile-pic" src="resources/images1/avatar1.png" alt="Profile" class="profile-avatar">
+                <span id="profile-name"></span>
+                <span class="dropdown-arrow">&#9662;</span>
+                <ul class="dropdown-menu">
+                    <li id="edit-profile-btn">Edit Profile</li>
+                    <li id="logout-btn">Logout</li>
+                </ul>
+            </div>
+        </div>
+        <button class="sidebar-toggle" id="sidebar-toggle">&#9776;</button>
+    </nav>
+
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li class="sidebar-item active" data-section="dashboard"><span>🏠</span> Dashboard</li>
+            <li class="sidebar-item" data-section="menu"><span>🍛</span> My Menu</li>
+            <li class="sidebar-item" data-section="orders"><span>📦</span> Orders</li>
+            <li class="sidebar-item" data-section="earnings"><span>💰</span> Earnings</li>
+            <li class="sidebar-item" data-section="reviews"><span>⭐</span> Reviews</li>
+            <li class="sidebar-item" data-section="calendar"><span>📅</span> Calendar</li>
+            <li class="sidebar-item" data-section="support"><span>💬</span> Support</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        
+        <section class="section dashboard-section" id="dashboard-section">
+            <div class="greeting-card card">
+                <img id="greet-avatar" src="resources/images1/avatar1.png" alt="Profile" class="greeting-avatar">
+                <div>
+                    <h2>Welcome back, <span id="greet-name">Mummy</span>!</h2>
+                    <div class="greeting-stats">
+                        <span title="Your rating">⭐ <span id="greet-rating">4.9</span></span>
+                        <span title="Total meals served">🍛 <span id="greet-meals">1200</span></span>
+                        <span title="Today's earnings">💰 ₹<span id="greet-earnings">0</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="status-cards">
+                <div class="status-card card">
+                    <div class="status-icon">🍛</div>
+                    <div>
+                        <div class="status-title">Meals Left Today</div>
+                        <div class="status-value"><span id="meals-left">20</span> / <span id="meal-limit">20</span></div>
+                    </div>
+                </div>
+                <div class="status-card card">
+                    <div class="status-icon">📦</div>
+                    <div>
+                        <div class="status-title">Orders Remaining</div>
+                        <div class="status-value" id="orders-remaining">0</div>
+                    </div>
+                </div>
+                <div class="status-card card">
+                    <div class="status-icon">🔔</div>
+                    <div>
+                        <div class="status-title">Notifications</div>
+                        <div class="status-value" id="notifications">No new orders</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section menu-section" id="menu-section" style="display:none;">
+            <div class="section-header">
+                <h2>Today's Menu</h2>
+                <button class="btn add-btn" id="add-dish-btn">+ Add Dish</button>
+            </div>
+            <div class="menu-cards" id="menu-cards">
+                
+            </div>
+            <div class="meal-limit-settings card">
+                <label for="meal-limit-input">Meal Limit (Max 20):</label>
+                <input type="number" id="meal-limit-input" min="1" max="20" value="20">
+                <button class="btn save-btn" id="save-meal-limit-btn">Save</button>
+            </div>
+        </section>
+
+        
+        <section class="section orders-section" id="orders-section" style="display:none;">
+            <div class="section-header">
+                <h2>Live Orders</h2>
+            </div>
+            <div class="orders-timeline" id="orders-timeline">
+                
+            </div>
+        </section>
+
+        
+        <section class="section earnings-section" id="earnings-section" style="display:none;">
+            <div class="section-header">
+                <h2>Earnings Snapshot</h2>
+            </div>
+            <div class="earnings-cards">
+                <div class="earnings-card card">
+                    <div class="earnings-title">Today</div>
+                    <div class="earnings-value">₹<span id="earnings-today">0</span></div>
+                </div>
+                <div class="earnings-card card">
+                    <div class="earnings-title">This Week</div>
+                    <div class="earnings-value">₹<span id="earnings-week">0</span></div>
+                </div>
+                <div class="earnings-card card">
+                    <div class="earnings-title">Lifetime</div>
+                    <div class="earnings-value">₹<span id="earnings-lifetime">0</span></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section reviews-section" id="reviews-section" style="display:none;">
+            <div class="section-header">
+                <h2>Reviews & Ratings</h2>
+            </div>
+            <div class="reviews-list" id="reviews-list">
+                
+            </div>
+        </section>
+
+        
+        <section class="section calendar-section" id="calendar-section" style="display:none;">
+            <div class="section-header">
+                <h2>Calendar View</h2>
+            </div>
+            <div class="calendar-container" id="calendar-container">
+                
+            </div>
+        </section>
+
+        
+        <section class="section support-section" id="support-section" style="display:none;">
+            <div class="section-header">
+                <h2>Help & Support</h2>
+            </div>
+            <div class="support-options card">
+                <button class="btn support-btn">💬 Chat with Admin</button>
+                <button class="btn support-btn">📞 Call Support</button>
+                <button class="btn support-btn">❓ FAQs</button>
+            </div>
+        </section>
+    </main>
+
+    
+    <div class="modal" id="dish-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-dish-modal">&times;</span>
+            <h2 id="dish-modal-title">Add/Edit Dish</h2>
+            <form id="dish-form">
+                <label>Dish Name:</label>
+                <input type="text" id="dish-name" required>
+                <label>Price (₹):</label>
+                <input type="number" id="dish-price" min="1" required>
+                <label>Quantity Left:</label>
+                <input type="number" id="dish-qty" min="1" max="20" required>
+                <label>
+                    <input type="checkbox" id="dish-premium">
+                    Premium Dish (e.g. Paneer, Chicken)
+                </label>
+                <div class="modal-actions">
+                    <button type="submit" class="btn save-btn">Save</button>
+                    <button type="button" class="btn cancel-btn" id="cancel-dish-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="modal" id="profile-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-profile-modal">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="profile-form">
+                <label>Name:</label>
+                <input type="text" id="edit-name" required>
+                <label>Phone:</label>
+                <input type="text" id="edit-phone" required>
+                <label>Address:</label>
+                <input type="text" id="edit-address" required>
+                <label>Hygiene Certification:</label>
+                <input type="text" id="edit-hygiene">
+                <label>Profile Photo:</label>
+                <input type="file" id="edit-photo" accept="image/*">
+                <div class="modal-actions">
+                    <button type="submit" class="btn save-btn">Save</button>
+                    <button type="button" class="btn cancel-btn" id="cancel-profile-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="jss/mummy_login.js"></script>
+</body>
+</html>
